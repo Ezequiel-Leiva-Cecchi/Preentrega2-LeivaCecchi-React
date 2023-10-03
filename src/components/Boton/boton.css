@@ -1,0 +1,22 @@
+button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+button{
+    background: #FECA05;
+    color: aliceblue;
+}
+.button-link{
+    background: #FECA05;
+    cursor: pointer;
+    border: none;
+    padding: 3px 32px;
+    color: azure;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    transition: (0,25s);
+}
