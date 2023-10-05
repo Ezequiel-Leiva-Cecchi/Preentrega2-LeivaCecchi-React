@@ -12,7 +12,7 @@ function Nav() {
             <button className='button-link'>Inicio</button>
             </li>
             <li>
-            <Link className='button-link'>Nosotros</Link>
+            <button className='button-link'><Link to={"/nosotros"}>Nosotros</Link></button>
             </li>
             <li>
               <button className='button-link'>Carrito <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">

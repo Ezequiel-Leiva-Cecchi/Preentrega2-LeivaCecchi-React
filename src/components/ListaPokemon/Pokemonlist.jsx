@@ -16,12 +16,13 @@ export function useFech() {
             const pokemonDetails = await pokemonResponse.json();
             const types = pokemonDetails.types.map((typeInfo) => typeInfo.type.name)
             const pokeId = pokemonDetails.id;
-            console.log(pokemonDetails);
+            const abilities = pokemonDetails.abilities.map((abilityInfo) => abilityInfo.ability.name);
             return {
               name: pokemon.name,
               imageUrl: pokemonDetails.sprites.front_default,
               types: types, 
-              pokeId: pokeId
+              pokeId: pokeId,
+              abilities: abilities,
             };
           })
         );
