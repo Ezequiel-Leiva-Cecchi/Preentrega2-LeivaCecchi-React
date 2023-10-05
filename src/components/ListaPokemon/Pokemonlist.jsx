@@ -1,13 +1,14 @@
+
 import React, { useState, useEffect } from 'react';
 
-export function useFech() {
+export function useFech(url) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=30&offset=0");
+        const response = await fetch(url);
         const result = await response.json();
 
         const pokemonData = await Promise.all(
@@ -38,8 +39,6 @@ export function useFech() {
     fetchData();
   }, []);
 
-  if (loading) {
-    return <div>Cargando...</div>;
-  }
-  return data;
+
+  return{data, loading}
 }

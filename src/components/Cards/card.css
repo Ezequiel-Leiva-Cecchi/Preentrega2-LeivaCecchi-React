@@ -1,6 +1,6 @@
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -65,3 +65,85 @@ ul {
   flex-basis: calc(27.000% - 20px); 
   margin-bottom: 20px;
 }
+button{
+  background-color: #ffcc00; 
+  color: #333; 
+  border: none; 
+  padding: 3px 5px; 
+  border-radius: 5px; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  text-decoration: none; 
+  cursor: pointer; 
+  display: inline-block; 
+  transition: background-color 0.3s ease; 
+}
+button:hover{
+  background-color: #ff9900; 
+}
+button a{
+  color:azure;
+  text-decoration: none;
+}
+.fire {
+  padding: 5px 13px;
+  border-radius: 3px ;
+   background-color: orange;
+   color: aliceblue;
+ }
+
+ .grass {
+  padding: 5px 13px;
+  border-radius: 3px ;
+   background-color: rgb(5, 250, 5);
+   color: aliceblue;
+ }
+
+ .poison {
+  padding: 5px 13px;
+  border-radius: 3px ;
+   background-color: blueviolet;
+   color: aliceblue;
+ }
+
+ .flying {
+  padding: 5px 13px;
+  border-radius: 3px ;
+   background-color: #0099CC;
+   color: aliceblue;
+ }
+
+ .water {
+  padding: 5px 13px;
+  border-radius: 3px ;
+   background-color: #3399FF;
+   color: aliceblue;
+ }
+
+ .bug {
+  padding: 5px 13px;
+  border-radius: 3px ;
+   background-color: #A8B820;
+   color: aliceblue;
+ }
+
+ .normal {
+  padding: 5px 13px;
+  border-radius: 3px ;
+   background-color: gray;
+   color: aliceblue;
+ }
+
+ .electric{
+  padding: 5px 13px;
+  border-radius: 3px ;
+  background-color: #FFD700;
+  color: aliceblue;
+ }
+
+ .ground{
+  padding: 5px 13px;
+  border-radius: 3px ;
+  background-color: #8B4513;
+  color: aliceblue;
+ }

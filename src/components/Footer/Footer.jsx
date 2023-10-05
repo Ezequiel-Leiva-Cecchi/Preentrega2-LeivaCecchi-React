@@ -1,18 +1,9 @@
 import React from 'react'
-
+import './footer.css';
 export default function Footer() {
     return (
         <section>
             <>
-                <div className='pokemons'>
-                    <h2>Pokemons</h2>
-                    <ul>
-                        <li>fuego</li>
-                        <li>agua</li>
-                        <li>planta</li>
-                        <li>electrico</li>
-                    </ul>
-                </div>
                 <div className='contactos'>
                     <h2>CONTACTANOS</h2>
                     <div>

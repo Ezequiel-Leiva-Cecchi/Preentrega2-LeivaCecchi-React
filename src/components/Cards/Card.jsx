@@ -4,11 +4,11 @@ import { useFech } from '../ListaPokemon/Pokemonlist';
 import { Link } from 'react-router-dom';
 
 function Card() {
-  const data = useFech();
+  const { data, loading } = useFech("https://pokeapi.co/api/v2/pokemon?limit=30&offset=0");
   let response
-  if (!data || !Array.isArray(data)) {
-     response = "<div>Cargando...</div>";
-  }else{response = mapeoDePokemons(data)}
+  if (loading) {
+    response = "<div>Cargando...</div>";
+  } else { response = mapeoDePokemons(data) }
 
 
   return (
@@ -22,21 +22,20 @@ function Card() {
 
 function mapeoDePokemons(data = []) {
   return data.map(function (pokemon) {
+    const typeClass = pokemon.types[0].toLowerCase();
+
     return (
-      <div className='card-container' key={pokemon.name}>
-        <li className='card' key={pokemon.name}>
-          <p className="poke-id">{pokemon.pokeId}</p>
-          <img className='image' src={pokemon.imageUrl} alt={`Imagen de ${pokemon.name}`} />
+      <div className={`card-container ${typeClass}`} key={pokemon.name}>
+        <li className="card" key={pokemon.name}>
+          <img className="image" src={pokemon.imageUrl} alt={"Imagen de"} />
           <div className="card-body">
             <p className="card-text">Name: {pokemon.name}</p>
-            <p className="card-text">Type: {pokemon.types.join(', ')} </p>
-            <button><Link to={`/detalles/:id`}>More Details</Link></button>
+            <p className={`card-text ${typeClass}`}>Type: {pokemon.types.join(', ')} </p>
+            <button><Link to={`/detalles/${pokemon.name}`}>More Details</Link></button>
           </div>
         </li>
       </div>
     );
-
   });
 }
-
 export default Card;
